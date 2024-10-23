@@ -4,7 +4,16 @@ import altair as alt
 
 # Função para carregar o CSV e gerar o gráfico de dispersão usando Altair
 def exibir_grafico_dispersao(data):
+    """
+    Exibe um gráfico de dispersão das coordenadas geográficas (latitude e longitude) 
+    dos dados fornecidos usando Altair.
 
+    Parâmetros:
+        data (DataFrame): Um DataFrame do pandas que deve conter as colunas 'latitude' e 'longitude'.
+
+    Retorna:
+        None: Esta função não retorna nenhum valor, mas exibe um gráfico de dispersão no Streamlit.
+    """
 
     # Verificar se as colunas de latitude e longitude estão presentes
     if 'latitude' in data.columns and 'longitude' in data.columns:
@@ -30,7 +39,15 @@ def exibir_grafico_dispersao(data):
 
 # Função para carregar o CSV e gerar o gráfico de altitude
 def exibir_grafico_altitude(data):
+    """
+    Exibe um gráfico de linha mostrando a altitude ao longo do tempo, utilizando dados fornecidos.
 
+    Parâmetros:
+        data (DataFrame): Um DataFrame do pandas que deve conter as colunas 'timestamp' e 'altitude'.
+
+    Retorna:
+        None: Esta função não retorna nenhum valor, mas exibe um gráfico de linha no Streamlit.
+    """
 
     # Converter a coluna 'timestamp' para o tipo datetime
     data['timestamp'] = pd.to_datetime(data['timestamp'])
@@ -45,7 +62,15 @@ def exibir_grafico_altitude(data):
 
 # Função para carregar o CSV e gerar as métricas de altitude
 def exibir_metricas_altitude(data):
+    """
+    Calcula e exibe métricas de altitude, incluindo a maior e a menor altitude registradas.
 
+    Parâmetros:
+        data (DataFrame): Um DataFrame do pandas que deve conter a coluna 'altitude'.
+
+    Retorna:
+        None: Esta função não retorna nenhum valor, mas exibe métricas de altitude no Streamlit.
+    """
     # Converter a coluna 'timestamp' para o tipo datetime
     data['timestamp'] = pd.to_datetime(data['timestamp'])
 

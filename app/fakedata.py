@@ -11,6 +11,15 @@ Faker.seed(0)
 
 # Função para gerar coordenadas aleatórias dentro dos limites de um país
 def gerar_lat_long_pais(pais):
+    """
+        Gera coordenadas de latitude e longitude aleatórias dentro dos limites geográficos de um país específico.
+
+        Parâmetros:
+            pais (str): Nome do país para o qual gerar as coordenadas.
+
+        Retorna:
+            tuple: Um par (latitude, longitude) com valores flutuantes representando as coordenadas geográficas.
+    """
     if pais == 'Brasil':
         latitude = random.uniform(-33.0, 5.3)  # Limites de latitude do Brasil
         longitude = random.uniform(-74.0, -34.0)  # Limites de longitude do Brasil
@@ -30,6 +39,12 @@ def gerar_lat_long_pais(pais):
 
 # Função para gerar altitude aleatória em metros (0 a 40.000 metros)
 def gerar_altitude():
+    """
+    Gera um valor aleatório de altitude em metros, variando de 0 a 40.000 metros.
+
+    Retorna:
+        float: Um valor flutuante representando a altitude em metros.
+    """
     return random.uniform(0, 40000)
 
 # Nome do arquivo CSV de saída

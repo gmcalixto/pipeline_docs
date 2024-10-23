@@ -8,7 +8,18 @@ from folium.plugins import HeatMap
 
 # Função para carregar o CSV e mostrar o trajeto do balão em um mapa
 def exibir_trajeto_mapa(data):
+    """
+    Exibe um mapa interativo mostrando o trajeto do balão com base nas coordenadas de latitude e longitude fornecidas.
 
+    Parâmetros:
+        data (DataFrame): Um DataFrame do pandas que deve conter as colunas 'latitude' e 'longitude'.
+
+    Retorna:
+        None: Esta função não retorna nenhum valor, mas exibe um mapa interativo no Streamlit.
+    
+    Erros:
+        Se 'latitude' ou 'longitude' não estiverem presentes, uma mensagem de erro será exibida.
+    """
     # Verificar se as colunas de latitude e longitude estão presentes
     if 'latitude' in data.columns and 'longitude' in data.columns:
  
@@ -27,7 +38,18 @@ def exibir_trajeto_mapa(data):
 
 
 def mapa_calor(data):
-    
+    """
+    Exibe um mapa de calor interativo baseado nas coordenadas de latitude e longitude fornecidas.
+
+    Parâmetros:
+        data (DataFrame): Um DataFrame do pandas que deve conter pelo menos as colunas 'latitude' e 'longitude'.
+
+    Retorna:
+        None: Esta função não retorna nenhum valor, mas exibe um mapa de calor no Streamlit.
+
+    Descrição:
+        O mapa de calor é gerado usando a biblioteca Folium e é exibido no Streamlit. A intensidade das cores no mapa de calor representa a concentração de pontos.
+    """
     st.subheader("Mapa de Calor")
 
     # Converter o DataFrame em uma lista de pares de coordenadas
