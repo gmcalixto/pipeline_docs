@@ -48,5 +48,10 @@ def mapa_calor(data):
 # Título do aplicativo
 st.title("Mapas")
 
-exibir_trajeto_mapa(st.session_state["dataset"])
-mapa_calor(st.session_state["dataset"])
+if 'dataset' in st.session_state:
+
+    exibir_trajeto_mapa(st.session_state["dataset"])
+    mapa_calor(st.session_state["dataset"])
+
+else:
+    st.info("Por favor, faça o upload de um arquivo CSV para visualizar o mapa.")
