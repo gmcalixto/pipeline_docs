@@ -13,6 +13,7 @@ Faker.seed(0)
 def gerar_lat_long_pais(pais):
     """
         Gera coordenadas de latitude e longitude aleatórias dentro dos limites geográficos de um país específico.
+        Adicionando mais uma linha sobre a documentação desta função
 
         Parâmetros:
             pais (str): Nome do país para o qual gerar as coordenadas.
@@ -64,7 +65,7 @@ with open(nome_arquivo, mode='w', newline='') as file:
     writer.writerow(['timestamp', 'latitude', 'longitude', 'altitude'])
 
     # Gerar os dados para cada minuto em 30 dias
-    for i in range(quantidade_dias):  # 30 dias * 24 horas * 60 minutos
+    for i in range(quantidade_dias):  # 30 dias
         timestamp = tempo_inicial + i * intervalo_minutos
         latitude, longitude = gerar_lat_long_pais(pais)
         altitude = gerar_altitude()
