@@ -3,7 +3,7 @@ import random
 from faker import Faker
 from datetime import datetime, timedelta
 
-pais = "Índia"
+pais = "EUA"
 
 # Inicializar o Faker e definir a semente para reprodutibilidade
 fake = Faker()
