@@ -20,6 +20,9 @@ def gerar_lat_long_pais(pais):
 
         Retorna:
             tuple: Um par (latitude, longitude) com valores flutuantes representando as coordenadas geográficas.
+
+        TODO:
+            Melhorar a precisão da localização
     """
     if pais == 'Brasil':
         latitude = random.uniform(-33.0, 5.3)  # Limites de latitude do Brasil
